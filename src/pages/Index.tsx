@@ -5,6 +5,7 @@ import BrazilSection from "@/components/BrazilSection";
 import SolutionSection from "@/components/SolutionSection";
 import CompareSection from "@/components/CompareSection";
 import AppsSection from "@/components/AppsSection";
+import GalleryCarousel from "@/components/GalleryCarousel";
 import FomoBanner from "@/components/FomoBanner";
 import TrustSection from "@/components/TrustSection";
 import CTASection from "@/components/CTASection";
@@ -20,6 +21,7 @@ const Index = () => (
     <SolutionSection />
     <CompareSection />
     <AppsSection />
+    <GalleryCarousel />
     <FomoBanner />
     <TrustSection />
     <CTASection />

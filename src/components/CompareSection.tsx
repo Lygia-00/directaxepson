@@ -14,8 +14,8 @@ const CompareSection = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-28" style={{ backgroundColor: "#f2f2f2" }}>
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-[60px] sm:py-20 lg:py-28" style={{ backgroundColor: "#f2f2f2" }}>
+      <div className="max-w-7xl mx-auto px-[5%] sm:px-6">
         <div className="text-center mb-14 space-y-4">
           <span className="font-satoshi font-semibold text-[11px] uppercase tracking-[2px] text-primary">Comparativo</span>
           <h2 className="font-clash font-bold text-accent text-3xl lg:text-4xl">Antes e depois da ColorWorks</h2>
@@ -27,7 +27,7 @@ const CompareSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
           }`}
         >
-          <table className="w-full border-separate" style={{ borderSpacing: "0 4px" }}>
+          <table className="w-full border-separate min-w-[600px]" style={{ borderSpacing: "0 4px" }}>
             <thead>
               <tr>
                 <th className="text-left font-satoshi font-semibold text-sm text-accent p-4 bg-white rounded-tl-xl rounded-bl-xl">Feature</th>

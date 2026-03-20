@@ -11,10 +11,10 @@ const CostSection = () => {
   ];
 
   return (
-    <section id="dados" className="py-20 lg:py-28" style={{ backgroundColor: "#d2d2d2" }}>
+    <section id="dados" className="py-[60px] sm:py-20 lg:py-28" style={{ backgroundColor: "#d2d2d2" }}>
       <div
         ref={ref}
-        className={`max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 transition-all duration-700 ${
+        className={`max-w-7xl mx-auto px-[5%] sm:px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 transition-all duration-700 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
         }`}
       >
@@ -35,7 +35,7 @@ const CostSection = () => {
         </div>
 
         {/* Right — cost cards */}
-        <div className="grid sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {costs.map((c, i) => (
             <div
               key={i}

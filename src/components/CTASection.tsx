@@ -12,8 +12,8 @@ const CTASection = () => {
   };
 
   return (
-    <section id="contato" className="py-20 lg:py-28" style={{ backgroundColor: "#08123a" }}>
-      <div className="max-w-2xl mx-auto px-6 text-center space-y-6">
+    <section id="contato" className="py-[60px] sm:py-20 lg:py-28" style={{ backgroundColor: "#08123a" }}>
+      <div className="max-w-2xl mx-auto px-[5%] sm:px-6 text-center space-y-6">
         <h2 className="font-clash font-bold text-white text-3xl lg:text-4xl">
           Agende sua demonstração gratuita
         </h2>
@@ -21,7 +21,7 @@ const CTASection = () => {
           Preencha o formulário e nossa equipe entrará em contato em até 2 horas úteis.
         </p>
 
-        <form onSubmit={handleSubmit} className="flex flex-wrap gap-3 justify-center mt-8">
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center mt-8">
           {[
             { key: "nome", placeholder: "Seu nome completo" },
             { key: "hospital", placeholder: "Hospital ou clínica" },
@@ -34,12 +34,12 @@ const CTASection = () => {
               required
               value={form[field.key as keyof typeof form]}
               onChange={(e) => setForm((prev) => ({ ...prev, [field.key]: e.target.value }))}
-              className="bg-white/[0.07] border border-white/[0.15] text-white font-satoshi text-sm px-4 py-3 rounded-lg placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary/50 flex-1 min-w-[200px]"
+              className="bg-white/[0.07] border border-white/[0.15] text-white font-satoshi text-sm px-4 py-3 rounded-lg placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary/50 w-full sm:flex-1 sm:min-w-[200px]"
             />
           ))}
           <button
             type="submit"
-            className="bg-primary text-primary-foreground font-satoshi font-semibold text-sm px-6 py-3 rounded-lg hover:brightness-110 active:scale-[0.97] transition-all"
+            className="bg-primary text-primary-foreground font-satoshi font-semibold text-sm px-6 py-3 rounded-lg hover:brightness-110 active:scale-[0.97] transition-all w-full sm:w-auto"
           >
             Quero a demonstração →
           </button>

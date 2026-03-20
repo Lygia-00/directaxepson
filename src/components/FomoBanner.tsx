@@ -18,11 +18,11 @@ const FomoBanner = () => {
   }, [count]);
 
   return (
-    <section className="py-16 lg:py-20 bg-primary">
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+    <section className="py-[60px] sm:py-16 lg:py-20 bg-primary">
+      <div className="max-w-7xl mx-auto px-[5%] sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/* Left */}
         <div className="space-y-4">
-          <h2 className="font-clash font-bold text-white leading-tight" style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)" }}>
+          <h2 className="font-clash font-bold text-white leading-tight text-[clamp(1.6rem,3vw,2.4rem)]">
             Vagas para demonstração ao vivo na HOSPEX estão acabando
           </h2>
           <p className="font-satoshi text-white/80 leading-relaxed">
@@ -30,7 +30,7 @@ const FomoBanner = () => {
           </p>
           <a
             href="#contato"
-            className="inline-flex bg-white text-primary font-satoshi font-bold text-sm px-6 py-3 rounded-lg hover:bg-white/90 active:scale-[0.97] transition-all"
+            className="inline-flex w-full sm:w-auto justify-center bg-white text-primary font-satoshi font-bold text-sm px-6 py-3 rounded-lg hover:bg-white/90 active:scale-[0.97] transition-all"
           >
             Garantir minha vaga →
           </a>
@@ -38,9 +38,10 @@ const FomoBanner = () => {
 
         {/* Right — counter */}
         <div className="flex justify-center lg:justify-end">
-          <div className="text-center">
-            <div className="font-clash font-black text-white text-6xl tabular-nums">{count}</div>
-            <div className="font-satoshi text-white/70 text-xs uppercase tracking-wide mt-2">vagas restantes<br />para demonstração</div>
+          <div className="flex flex-col items-center text-center shrink-0 min-w-[120px]">
+            <div className="font-clash font-black text-white text-[3rem] leading-none tabular-nums">{count}</div>
+            <span className="font-satoshi text-white/70 text-xs mt-1.5 block">vagas restantes</span>
+            <span className="font-satoshi text-white/70 text-xs block">para demonstração gratuita</span>
           </div>
         </div>
       </div>
