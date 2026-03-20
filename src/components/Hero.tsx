@@ -13,11 +13,11 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative pt-28 pb-20 lg:pt-32 lg:pb-28 overflow-hidden" style={{ backgroundColor: "#08123a" }}>
+    <section className="relative pt-28 pb-16 sm:pb-20 lg:pt-32 lg:pb-28 overflow-hidden" style={{ backgroundColor: "#08123a" }}>
       {/* Radial glow */}
       <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 60% 80% at 80% 40%, rgba(0,49,142,0.35) 0%, transparent 70%)" }} />
 
-      <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+      <div className="relative max-w-7xl mx-auto px-[5%] sm:px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
         {/* Left Column */}
         <div className="space-y-8">
           {/* Badge */}
@@ -29,7 +29,7 @@ const Hero = () => {
           </div>
 
           {/* H1 */}
-          <h1 className="opacity-0 animate-fade-up font-clash font-bold text-white leading-[1.08]" style={{ fontSize: "clamp(2.4rem, 5vw, 4rem)", animationDelay: "0.25s" }}>
+          <h1 className="opacity-0 animate-fade-up font-clash font-bold text-white leading-[1.08] text-[clamp(2rem,5vw,4rem)] sm:text-[clamp(2.4rem,5vw,4rem)]" style={{ animationDelay: "0.25s" }}>
             Seu hospital tem um{" "}
             <span className="text-primary">custo invisível</span> — e ele está na pulseira do paciente
           </h1>
@@ -40,7 +40,7 @@ const Hero = () => {
           </p>
 
           {/* Stats row */}
-          <div className="opacity-0 animate-fade-up border-t border-b border-white/[0.08] py-5 grid grid-cols-3 gap-4" style={{ animationDelay: "0.55s" }}>
+          <div className="opacity-0 animate-fade-up border-t border-b border-white/[0.08] py-5 flex flex-col sm:grid sm:grid-cols-3 gap-3 sm:gap-4" style={{ animationDelay: "0.55s" }}>
             {stats.map((s) => (
               <div key={s.number}>
                 <div className="font-clash font-black text-primary text-2xl">{s.number}</div>
@@ -50,11 +50,11 @@ const Hero = () => {
           </div>
 
           {/* CTAs */}
-          <div className="opacity-0 animate-fade-up flex flex-wrap gap-3" style={{ animationDelay: "0.7s" }}>
-            <a href="#solucao" className="bg-primary text-primary-foreground font-satoshi font-semibold text-sm px-6 py-3 rounded-lg hover:brightness-110 active:scale-[0.97] transition-all">
+          <div className="opacity-0 animate-fade-up flex flex-col sm:flex-row gap-3" style={{ animationDelay: "0.7s" }}>
+            <a href="#solucao" className="bg-primary text-primary-foreground font-satoshi font-semibold text-sm px-6 py-3 rounded-lg hover:brightness-110 active:scale-[0.97] transition-all text-center w-full sm:w-auto">
               Ver a solução →
             </a>
-            <a href="#dados" className="border border-white/20 text-white font-satoshi font-medium text-sm px-6 py-3 rounded-lg hover:bg-white/5 active:scale-[0.97] transition-all">
+            <a href="#dados" className="border border-white/20 text-white font-satoshi font-medium text-sm px-6 py-3 rounded-lg hover:bg-white/5 active:scale-[0.97] transition-all text-center w-full sm:w-auto">
               Ver os dados completos
             </a>
           </div>
@@ -65,7 +65,7 @@ const Hero = () => {
           {cards.map((card, i) => (
             <div
               key={i}
-              className={`opacity-0 animate-fade-up rounded-[14px] p-5 flex items-start gap-4 border ${
+              className={`opacity-0 animate-fade-up rounded-[14px] p-5 flex items-start gap-4 border w-full ${
                 card.highlight
                   ? "bg-primary/10 border-primary/25"
                   : "bg-white/[0.05] border-white/10"

@@ -13,8 +13,8 @@ const SolutionSection = () => {
   ];
 
   return (
-    <section id="solucao" className="py-20 lg:py-28 bg-background">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="solucao" className="py-[60px] sm:py-20 lg:py-28 bg-background">
+      <div className="max-w-7xl mx-auto px-[5%] sm:px-6">
         <div className="text-center max-w-[700px] mx-auto mb-14 space-y-4">
           <span className="font-satoshi font-semibold text-[11px] uppercase tracking-[2px] text-primary">A solução</span>
           <h2 className="font-clash font-bold text-accent text-3xl lg:text-4xl">
@@ -27,7 +27,7 @@ const SolutionSection = () => {
 
         <div
           ref={ref}
-          className={`grid sm:grid-cols-2 lg:grid-cols-3 gap-5 transition-all duration-700 ${
+          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
           }`}
         >

@@ -14,7 +14,7 @@ const SourcesBox = () => {
 
   return (
     <section className="py-12 border-t border-accent/10" style={{ backgroundColor: "#f2f2f2" }}>
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-[5%] sm:px-6">
         <h3 className="font-satoshi font-semibold text-[13px] text-accent uppercase tracking-[1px] mb-5">
           Fontes e Referências
         </h3>

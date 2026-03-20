@@ -10,8 +10,8 @@ const TrustSection = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-28" style={{ backgroundColor: "#d2d2d2" }}>
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-[60px] sm:py-20 lg:py-28" style={{ backgroundColor: "#d2d2d2" }}>
+      <div className="max-w-7xl mx-auto px-[5%] sm:px-6">
         <div className="text-center mb-14 space-y-4">
           <span className="font-satoshi font-semibold text-[11px] uppercase tracking-[2px] text-primary">Confiança</span>
           <h2 className="font-clash font-bold text-accent text-3xl lg:text-4xl">Por que escolher a Directa</h2>
@@ -19,7 +19,7 @@ const TrustSection = () => {
 
         <div
           ref={ref}
-          className={`grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-3xl mx-auto lg:max-w-none transition-all duration-700 ${
+          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-3xl mx-auto lg:max-w-none transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
           }`}
         >

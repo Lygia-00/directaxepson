@@ -16,13 +16,13 @@ const Navbar = () => {
       }`}
       style={{ backgroundColor: "rgba(8,18,58,0.97)" }}
     >
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-[5%] sm:px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <span className="font-satoshi font-[800] text-white text-xl tracking-tight uppercase">
           DIRECTA<span className="text-primary">.</span>
         </span>
 
-        {/* Badge */}
+        {/* Badge — hidden on mobile */}
         <span className="hidden sm:inline-flex bg-primary text-primary-foreground font-satoshi font-bold text-[11px] uppercase tracking-[0.12em] px-4 py-1.5 rounded-[20px]">
           HOSPEX 2026
         </span>
@@ -30,7 +30,7 @@ const Navbar = () => {
         {/* CTA */}
         <a
           href="#contato"
-          className="bg-primary text-primary-foreground font-satoshi font-semibold text-sm px-5 py-2 rounded-lg hover:brightness-110 active:scale-[0.97] transition-all duration-200"
+          className="bg-primary text-primary-foreground font-satoshi font-semibold text-xs sm:text-sm px-3.5 py-2 sm:px-5 sm:py-2 rounded-lg hover:brightness-110 active:scale-[0.97] transition-all duration-200"
         >
           Quero uma demonstração →
         </a>
