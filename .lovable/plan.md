@@ -1,16 +1,24 @@
 
 
-# Update GalleryCarousel to use Supabase Storage
+# Corrigir tamanho e enquadramento do GalleryCarousel
 
-## Changes — single file: `src/components/GalleryCarousel.tsx`
+## Alterações no `src/components/GalleryCarousel.tsx`
 
-1. **Import Supabase client** from `@/integrations/supabase/client`
-2. **Replace slides array** with 3 slides using `supabase.storage.from('images').getPublicUrl(file).data.publicUrl` to generate URLs:
-   - `familia_produtos.png` (image)
-   - `Impressora de Etiquetas ColorWorks C4000.png` (image)
-   - `Directa_Epson.MOV` (video)
-3. **Render logic**: Check if slide is video (`.MOV`) → render `<video controls muted playsInline>` instead of `<img>`. Both use `w-full`, `object-cover`, `rounded-xl`, max-height 480px.
-4. **Auto-play pause**: When the video slide is active (`current === 2`), set `isPaused = true` automatically via useEffect.
-5. **Remove captions**: Delete the caption `<p>` element entirely. Remove `caption` from slide data.
-6. Keep all existing carousel controls (arrows, dots, counter, touch/swipe, scroll reveal header).
+### Media (imagens e vídeo)
+- `object-fit: contain` em vez de `cover`
+- Height: `500px` desktop, `300px` mobile
+- Images: background `#08123a`, centralizadas
+- Video: background `#000000`
+- `border-radius: 12px`, `width: 100%`
+
+### Container geral
+- `max-width: 960px` (era 900px)
+- Contador "1/3" movido para fora da área de mídia (acima do vídeo não sobrepõe controles)
+
+### Setas de navegação
+- Desktop: posicionadas fora do container de mídia (`-left-14` / `-right-14`), nunca sobrepostas
+- Mobile: `hidden` (ocultas), swipe mantido
+
+### Vídeo
+- Controles nativos visíveis — contador reposicionado para não sobrepor
 
