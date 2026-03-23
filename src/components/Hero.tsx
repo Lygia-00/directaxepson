@@ -7,9 +7,9 @@ const Hero = () => {
 
   const cards = [
   { icon: "🩸", number: "1  em  1.500", label: "pacientes recebem transfusão errada", highlight: true, source: "OMS, 2023" },
-  { icon: "⚖️", number: "US$34Bi+", label: "pagos em indenizações por erros médicos 2013–2023 (EUA)", source: "Diederich Healthcare" },
-  { icon: "🏥", number: "13% a 67%", label: "dos erros cirúrgicos ligados a falhas de identificação", source: "Joint Commission" },
-  { icon: "📊", number: "57,5%", label: "de redução nos erros com pulseiras com código de barras", source: "AHRQ" }];
+  { icon: "⚖️", number: "US$34Bi+", label: "pagos em indenizações por erros médicos entre 2013–2023 (EUA). Média por caso: US$348 mil", source: "Fonte: National Practitioner Data Bank, 2023" },
+  { icon: "🏥", number: "13%  a  67%", label: "dos erros cirúrgicos e de transfusão são ligados a falhas de identificação de pacientes", source: "Fonte: Ministério da Saúde da Espanha, 2016 / WHO" },
+  { icon: "📊", number: "57,5%", label: "de redução nos erros médicos com uso de pulseiras com código de barras e foto", source: "Fonte: Meta-análise — Applied Clinical Informatics, 2015" }];
 
 
   return (
