@@ -4,7 +4,7 @@ const CompareSection = () => {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
 
   const rows = [
-  ["Identificação visual", "Texto preto e branco, sem foto", "Foto colorida do paciente"],
+  ["Identificação visual do paciente", "Texto preto e branco, sem foto", "Foto colorida do paciente"],
   ["Cores de risco", "Adesivos manuais, sujeitos a erro", "Impressão automática por protocolo"],
   ["Código de barras/QR", "Sem padronização, erros de leitura", "QR Code integrado ao PEP"],
   ["Impressão", "Centralizada, lenta, com estoque", "Sob demanda, no ponto de atendimento"],
@@ -19,7 +19,7 @@ const CompareSection = () => {
         <div className="text-center mb-14 space-y-4">
           <span className="font-satoshi font-semibold text-[11px] uppercase tracking-[2px] text-primary">Antes × Depois
 </span>
-          <h2 className="font-clash font-bold text-accent text-3xl lg:text-4xl">Antes e depois da ColorWorks</h2>
+          <h2 className="font-clash font-bold text-accent text-3xl lg:text-4xl">O que muda no dia a dia do seu hospital</h2>
         </div>
 
         <div ref={ref}

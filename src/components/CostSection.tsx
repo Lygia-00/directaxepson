@@ -4,10 +4,10 @@ const CostSection = () => {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
 
   const costs = [
-  { emoji: "💸", title: "Indenizações e processos judiciais", desc: "Processos por erro médico podem ultrapassar milhões em indenizações, além de custos judiciais prolongados." },
-  { emoji: "📉", title: "Perda de acreditação e reputação", desc: "Falhas de identificação comprometem selos de qualidade e a confiança da comunidade médica." },
-  { emoji: "🔁", title: "Reinternações e retrabalho", desc: "Erros geram tratamentos desnecessários, prolongam internações e sobrecarregam equipes." },
-  { emoji: "👥", title: "Turnover e clima organizacional", desc: "Profissionais expostos a erros recorrentes sofrem burnout e pedem demissão." }];
+  { emoji: "💸", title: "Indenizações e processos judiciais", desc: "A média de indenização por caso de negligência médica nos EUA é de US$348 mil. No Brasil, o volume de ações está crescendo 130% em 10 anos (CNJ, 2017)." },
+  { emoji: "📉", title: "Perda de acreditação e reputação", desc: "Hospitais com erros documentados de identificação perdem pontos em processos de acreditação (JCI, ONA), afetando contratos com operadoras e planos de saúde." },
+  { emoji: "🔁", title: "Reinternações e retrabalho", desc: "Erros de identificação geram procedimentos repetidos, exames refeitos e reinternações — todos não reembolsáveis, consumindo recursos invisíveis do hospital." },
+  { emoji: "👥", title: "Turnover e clima organizacional", desc: "Profissionais envolvidos em erros graves desenvolvem burnout, culpa e depressão — aumentando a rotatividade e o custo de reposição de equipe." }];
 
 
   return (
@@ -23,11 +23,11 @@ const CostSection = () => {
           <span className="font-satoshi font-semibold text-[11px] uppercase tracking-[2px] text-primary">O custo escondido
 </span>
           <h2 className="font-clash font-bold text-accent text-3xl lg:text-4xl leading-tight">
-            O custo que ninguém contabiliza
+            Cada erro de identificação carrega um preço que não aparece no orçamento
           </h2>
           <div className="w-12 h-[3px] bg-primary rounded-full" />
           <p className="font-satoshi text-gray-600 leading-relaxed">
-            A cada ano, milhões de pacientes são vítimas de erros evitáveis ligados à identificação incorreta. Esses erros custam vidas, dinheiro e reputação — e a maioria dos hospitais nem sabe que está pagando por eles.
+            Gestores hospitalares monitoram custos de insumos, energia, pessoal. Mas existe uma categoria de despesa que a maioria nunca mensura com precisão: o custo jurídico, reputacional e operacional gerado por falhas de identificação de pacientes.
           </p>
           <blockquote className="border-l-4 border-primary bg-white rounded-r-lg p-5 font-satoshi italic text-accent text-sm leading-relaxed">
             "A identificação incorreta do paciente é a causa-raiz da maioria dos eventos adversos evitáveis no ambiente hospitalar."

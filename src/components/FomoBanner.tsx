@@ -27,12 +27,12 @@ const FomoBanner = () => {
 
           </h2>
           <p className="font-satoshi text-white/80 leading-relaxed">
-            Garanta agora a demonstração presencial com a equipe Directa. Agenda limitada — apenas para gestores e diretores hospitalares.
+            A identificação colorida com foto do paciente não é mais um diferencial de futuro — é um padrão de qualidade assistencial que separa os hospitais que se preparam dos que reagem a crises.
           </p>
           <a href="#contato"
           className="inline-flex w-full sm:w-auto justify-center bg-white text-primary font-satoshi font-bold text-sm px-6 py-3 rounded-lg hover:bg-white/90 active:scale-[0.97] transition-all">
             
-            Garantir minha vaga →
+            Agendar demonstração gratuíta →
           </a>
         </div>
 
@@ -40,9 +40,8 @@ const FomoBanner = () => {
         <div className="flex justify-center">
           <div className="flex flex-col items-center text-center shrink-0 min-w-[120px]">
             <div className="font-clash font-black text-white text-[3rem] leading-none tabular-nums">{count}</div>
-            <span className="font-satoshi text-white/70 text-xs mt-1.5 block">brasileiros morrem por hora
-</span>
-            <span className="font-satoshi text-white/70 text-xs block">para demonstração gratuita</span>
+            <span className="font-satoshi text-white/70 text-xs mt-1.5 block">brasileiros morrem por hora</span>
+            <span className="font-satoshi text-white/70 text-xs block">por erros médicos evitáveis</span>
           </div>
         </div>
       </div>
