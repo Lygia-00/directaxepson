@@ -37,7 +37,7 @@ const FomoBanner = () => {
         </div>
 
         {/* Right — counter */}
-        <div className="flex justify-center lg:justify-end">
+        <div className="flex justify-center">
           <div className="flex flex-col items-center text-center shrink-0 min-w-[120px]">
             <div className="font-clash font-black text-white text-[3rem] leading-none tabular-nums">{count}</div>
             <span className="font-satoshi text-white/70 text-xs mt-1.5 block">vagas restantes</span>
