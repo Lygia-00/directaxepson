@@ -1,14 +1,15 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { supabase } from "@/integrations/supabase/client";
 
 const slides = [
-  { src: "/images/familia-produtos.jpg", caption: "Família ColorWorks — C4000u, C6000, C6500 e C7500" },
-  { src: "/images/c4000-angulo.jpg", caption: "Epson ColorWorks C4000u — impressão de etiquetas coloridas sob demanda" },
-  { src: "/images/c4000-frontal.jpg", caption: "Painel de controle touchscreen com interface intuitiva" },
-  { src: "/images/c4000-etiqueta.jpg", caption: "Impressão de etiqueta com alta resolução de cor em segundos" },
-  { src: "/images/c4000-aberto.jpg", caption: "Acesso fácil ao mecanismo de impressão para manutenção rápida" },
-  { src: "/images/c4000-tinta.jpg", caption: "Cartucho de tinta matte black — longa duração e qualidade consistente" },
-];
+  { file: "familia_produtos.png", type: "image" as const },
+  { file: "Impressora de Etiquetas ColorWorks C4000.png", type: "image" as const },
+  { file: "Directa_Epson.MOV", type: "video" as const },
+].map((s) => ({
+  ...s,
+  url: supabase.storage.from("images").getPublicUrl(s.file).data.publicUrl,
+}));
 
 const GalleryCarousel = () => {
   const [current, setCurrent] = useState(0);
@@ -18,6 +19,13 @@ const GalleryCarousel = () => {
 
   const next = useCallback(() => setCurrent((p) => (p + 1) % slides.length), []);
   const prev = useCallback(() => setCurrent((p) => (p - 1 + slides.length) % slides.length), []);
+
+  // Pause auto-play on video slide
+  useEffect(() => {
+    if (slides[current].type === "video") {
+      setIsPaused(true);
+    }
+  }, [current]);
 
   useEffect(() => {
     if (isPaused) return;
@@ -50,38 +58,43 @@ const GalleryCarousel = () => {
           </p>
         </div>
 
-        {/* Carousel */}
         <div
           className="relative max-w-[900px] mx-auto"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
+          onMouseEnter={() => { if (slides[current].type !== "video") setIsPaused(true); }}
+          onMouseLeave={() => { if (slides[current].type !== "video") setIsPaused(false); }}
           onTouchStart={onTouchStart}
           onTouchEnd={onTouchEnd}
         >
-          {/* Image */}
           <div className="relative overflow-hidden rounded-xl">
             {slides.map((slide, i) => (
-              <img
+              <div
                 key={i}
-                src={slide.src}
-                alt={slide.caption}
-                className="w-full h-[240px] sm:h-[480px] object-cover rounded-xl absolute inset-0 transition-opacity duration-[400ms] ease-in-out"
-                style={{ opacity: i === current ? 1 : 0, position: i === current ? "relative" : "absolute" }}
-              />
+                className="w-full transition-opacity duration-[400ms] ease-in-out absolute inset-0"
+                style={{ opacity: i === current ? 1 : 0, position: i === current ? "relative" : "absolute", pointerEvents: i === current ? "auto" : "none" }}
+              >
+                {slide.type === "video" ? (
+                  <video
+                    src={slide.url}
+                    controls
+                    muted
+                    playsInline
+                    className="w-full rounded-xl object-cover max-h-[240px] sm:max-h-[480px]"
+                  />
+                ) : (
+                  <img
+                    src={slide.url}
+                    alt=""
+                    className="w-full h-[240px] sm:h-[480px] object-cover rounded-xl"
+                  />
+                )}
+              </div>
             ))}
 
-            {/* Counter badge */}
             <div className="absolute top-4 right-4 font-satoshi text-xs text-white/50 bg-black/40 px-2.5 py-1 rounded-[20px]">
               {current + 1} / {slides.length}
             </div>
           </div>
 
-          {/* Caption */}
-          <p className="font-satoshi font-medium text-sm text-white text-center mt-4 min-h-[24px]">
-            {slides[current].caption}
-          </p>
-
-          {/* Arrows */}
           <button
             onClick={prev}
             className="absolute left-2 sm:-left-5 top-[120px] sm:top-[240px] -translate-y-1/2 w-11 h-11 rounded-full flex items-center justify-center bg-black/50 sm:bg-white/[0.08] hover:bg-primary/85 transition-colors duration-200 cursor-pointer"
@@ -97,7 +110,6 @@ const GalleryCarousel = () => {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 6 15 12 9 18" /></svg>
           </button>
 
-          {/* Dots */}
           <div className="flex gap-2 justify-center mt-5">
             {slides.map((_, i) => (
               <button
