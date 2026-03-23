@@ -40,8 +40,8 @@ const FomoBanner = () => {
         <div className="flex justify-center">
           <div className="flex flex-col items-center text-center shrink-0 min-w-[120px]">
             <div className="font-clash font-black text-white text-[3rem] leading-none tabular-nums">{count}</div>
-            <span className="font-satoshi text-white/70 text-xs mt-1.5 block">por erros médicos evitáveis</span>
-            <span className="font-satoshi text-white/70 text-xs block"></span>
+            <span className="font-satoshi text-white/70 text-xs mt-1.5 block">brasileiros morrem por hora</span>
+            <span className="font-satoshi text-white/70 text-xs block">por erros médicos evitáveis</span>
           </div>
         </div>
       </div>
