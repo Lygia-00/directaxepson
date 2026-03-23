@@ -1,5 +1,22 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
+// In-memory rate limiting (per isolate; resets on cold start but sufficient for burst protection)
+const rateLimitMap = new Map<string, number[]>();
+const RATE_LIMIT_WINDOW_MS = 60_000; // 1 minute
+const RATE_LIMIT_MAX = 5; // max 5 requests per IP per minute
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const timestamps = (rateLimitMap.get(ip) || []).filter(t => now - t < RATE_LIMIT_WINDOW_MS);
+  if (timestamps.length >= RATE_LIMIT_MAX) {
+    rateLimitMap.set(ip, timestamps);
+    return true;
+  }
+  timestamps.push(now);
+  rateLimitMap.set(ip, timestamps);
+  return false;
+}
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
@@ -17,8 +34,19 @@ serve(async (req) => {
   }
 
   try {
+    // Rate limiting by IP
+    const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || 
+               req.headers.get("cf-connecting-ip") || 
+               "unknown";
+    if (isRateLimited(ip)) {
+      return new Response(JSON.stringify({ error: "Too many requests" }), {
+        status: 429,
+        headers: { ...corsHeaders, "Content-Type": "application/json", "Retry-After": "60" },
+      });
+    }
+
     const body = await req.json();
-    const { nome, hospital, whatsapp, created_at } = body;
+    const { nome, hospital, whatsapp } = body;
 
     // Input validation
     if (typeof nome !== "string" || nome.trim().length < 3 || nome.trim().length > 200) {
@@ -46,7 +74,7 @@ serve(async (req) => {
     const safeHospital = escapeHtml(hospital.trim());
     const safeWhatsapp = escapeHtml(whatsapp.trim());
 
-    const date = new Date(created_at || Date.now());
+    const date = new Date();
     const formatted = date.toLocaleString("pt-BR", {
       timeZone: "America/Sao_Paulo",
       day: "2-digit",
