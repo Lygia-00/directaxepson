@@ -34,16 +34,16 @@ const BrazilSection = () => {
           {cards.map((c, i) =>
           <div
             key={i}
-            className={`rounded-[14px] p-6 border transition-all duration-500 ${
+            className={`rounded-[14px] py-7 px-6 border transition-all duration-500 ${
             c.featured ?
             "bg-primary/[0.12] border-primary/30" :
             "bg-white/[0.05] border-white/10"}`
             }
             style={{ transitionDelay: `${i * 80}ms` }}>
             
-              <div className="font-clash font-black text-primary text-[2.4rem] leading-none">{c.number}</div>
-              <h3 className="font-satoshi font-semibold text-[15px] text-white mt-2">{c.title}</h3>
-              <p className="font-satoshi text-[13px] text-white/55 mt-2 leading-relaxed">{c.desc}</p>
+              <div className="font-clash font-black text-primary text-[2.4rem] leading-none mb-1.5 tracking-[-0.04em]">{c.number}</div>
+              <h3 className="font-satoshi font-semibold text-[15px] text-white mb-2">{c.title}</h3>
+              <p className="font-satoshi text-[13px] text-white/55 leading-[1.65]">{c.desc}</p>
             </div>
           )}
         </div>
