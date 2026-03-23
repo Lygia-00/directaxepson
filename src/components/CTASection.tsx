@@ -46,7 +46,7 @@ const CTASection = () => {
         </form>
 
         <p className="font-satoshi text-xs text-white/35 mt-4">
-          ✓ Sem compromisso · ✓ Demonstração ao vivo · ✓ Resposta em até 2h úteis
+          ✓ Agende uma demonstração e receba uma visita de nossas consultoras
         </p>
       </div>
     </section>
