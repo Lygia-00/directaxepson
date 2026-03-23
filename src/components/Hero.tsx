@@ -78,9 +78,9 @@ const Hero = () => {
                 {card.icon}
               </div>
               <div>
-                <div className="font-clash font-black text-white text-[1.6rem] leading-tight">{card.number}</div>
-                <div className="font-satoshi font-normal text-white/55 text-xs mt-1">{card.label}</div>
-                <div className="font-satoshi font-normal text-white/30 text-[10px] mt-2">{card.source}</div>
+                <div className="font-clash font-black text-white text-[1.6rem] leading-none mb-1.5 tracking-[-0.04em]">{card.number}</div>
+                <div className="font-satoshi font-normal text-white/55 text-xs leading-[1.55] mb-1">{card.label}</div>
+                <div className="font-satoshi font-normal text-white/30 text-[10px] mt-1">{card.source}</div>
               </div>
             </div>
           )}
