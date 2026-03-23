@@ -14,12 +14,31 @@ export type Database = {
   }
   public: {
     Tables: {
+      lead_rate_limits: {
+        Row: {
+          created_at: string
+          id: string
+          ip_hash: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          ip_hash: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          ip_hash?: string
+        }
+        Relationships: []
+      }
       leads: {
         Row: {
           created_at: string | null
           hospital: string
           id: string
           nome: string
+          notification_sent_at: string | null
           whatsapp: string
         }
         Insert: {
@@ -27,6 +46,7 @@ export type Database = {
           hospital: string
           id?: string
           nome: string
+          notification_sent_at?: string | null
           whatsapp: string
         }
         Update: {
@@ -34,6 +54,7 @@ export type Database = {
           hospital?: string
           id?: string
           nome?: string
+          notification_sent_at?: string | null
           whatsapp?: string
         }
         Relationships: []
