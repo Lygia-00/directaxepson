@@ -20,7 +20,6 @@ const GalleryCarousel = () => {
   const next = useCallback(() => setCurrent((p) => (p + 1) % slides.length), []);
   const prev = useCallback(() => setCurrent((p) => (p - 1 + slides.length) % slides.length), []);
 
-  // Pause auto-play on video slide
   useEffect(() => {
     if (slides[current].type === "video") {
       setIsPaused(true);
@@ -51,15 +50,15 @@ const GalleryCarousel = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
           }`}
         >
-          <span className="font-satoshi font-semibold text-[11px] uppercase tracking-[2px] text-primary">Na prática</span>
+          <span className="font-satoshi font-semibold text-[11px] uppercase tracking-[2px] text-primary block mb-4">Na prática</span>
           <h2 className="font-clash font-bold text-white text-3xl lg:text-4xl">Veja a solução funcionando</h2>
-          <p className="font-satoshi text-white/60 leading-relaxed">
+          <p className="font-satoshi text-white/60 leading-relaxed !mb-0">
             Impressoras Epson ColorWorks — tecnologia de impressão colorida sob demanda para identificação hospitalar com precisão e velocidade.
           </p>
         </div>
 
         <div
-          className="relative max-w-[960px] mx-auto"
+          className="relative max-w-[900px] mx-auto"
           onMouseEnter={() => { if (slides[current].type !== "video") setIsPaused(true); }}
           onMouseLeave={() => { if (slides[current].type !== "video") setIsPaused(false); }}
           onTouchStart={onTouchStart}
@@ -78,15 +77,15 @@ const GalleryCarousel = () => {
                     controls
                     muted
                     playsInline
-                    className="w-full rounded-xl object-contain h-[300px] sm:h-[500px]"
-                    style={{ backgroundColor: "#000000" }}
+                    className="w-full rounded-xl"
+                    style={{ height: "500px", objectFit: "contain", backgroundColor: "#000000" }}
                   />
                 ) : (
                   <img
                     src={slide.url}
                     alt=""
-                    className="w-full h-[300px] sm:h-[500px] object-contain rounded-xl"
-                    style={{ backgroundColor: "#08123a" }}
+                    className="w-full rounded-xl"
+                    style={{ height: "500px", objectFit: "contain", backgroundColor: "#08123a" }}
                   />
                 )}
               </div>

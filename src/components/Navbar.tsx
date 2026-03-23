@@ -17,10 +17,16 @@ const Navbar = () => {
       style={{ backgroundColor: "rgba(8,18,58,0.97)" }}
     >
       <div className="max-w-7xl mx-auto px-[5%] sm:px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <span className="font-satoshi font-[800] text-white text-xl tracking-tight uppercase">
-          DIRECTA<span className="text-primary">.</span>
-        </span>
+        {/* Logo — DIRECTA × EPSON */}
+        <div className="flex items-center gap-2.5">
+          <span className="font-satoshi font-[800] text-white text-lg tracking-[0.5px] uppercase">
+            DIRECTA<span className="text-primary">.</span>
+          </span>
+          <span className="text-white/25 text-base font-light">×</span>
+          <span className="font-satoshi font-semibold text-[15px] text-white/75 tracking-[1px] uppercase">
+            EPSON
+          </span>
+        </div>
 
         {/* Badge — hidden on mobile */}
         <span className="hidden sm:inline-flex bg-primary text-primary-foreground font-satoshi font-bold text-[11px] uppercase tracking-[0.12em] px-4 py-1.5 rounded-[20px]">
