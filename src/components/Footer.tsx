@@ -4,8 +4,14 @@ const Footer = () => (
       <span className="font-satoshi text-xs text-white/30">
         © {new Date().getFullYear()} Directa. Todos os direitos reservados.
       </span>
-      <span className="font-satoshi text-xs text-white/40">
-        DIRECTA<span className="text-primary">.</span> × EPSON
+      <span className="flex items-center gap-1.5">
+        <span className="font-satoshi font-[800] text-[13px] text-white/50 tracking-[0.5px] uppercase">
+          DIRECTA<span className="text-primary">.</span>
+        </span>
+        <span className="text-white/20 text-sm font-light">×</span>
+        <span className="font-satoshi font-semibold text-[12px] text-white/50 tracking-[1px] uppercase">
+          EPSON
+        </span>
       </span>
     </div>
   </footer>

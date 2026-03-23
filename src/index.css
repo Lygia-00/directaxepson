@@ -68,17 +68,36 @@
     overflow-x: hidden;
   }
 
-  h1, h2, h3 {
+  h1 {
     font-family: 'Clash Display', sans-serif;
     line-height: 1.1;
     letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-family: 'Clash Display', sans-serif;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+  }
+
+  h3 {
+    font-family: 'Clash Display', sans-serif;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
   }
 
   p {
     font-family: 'Satoshi', sans-serif;
     font-weight: 400;
-    line-height: 1.75;
+    line-height: 1.8;
     letter-spacing: -0.01em;
+    margin-bottom: 1.5rem;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
   }
 }
 
