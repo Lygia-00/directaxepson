@@ -59,7 +59,7 @@ const GalleryCarousel = () => {
         </div>
 
         <div
-          className="relative max-w-[900px] mx-auto"
+          className="relative max-w-[960px] mx-auto"
           onMouseEnter={() => { if (slides[current].type !== "video") setIsPaused(true); }}
           onMouseLeave={() => { if (slides[current].type !== "video") setIsPaused(false); }}
           onTouchStart={onTouchStart}
@@ -78,33 +78,35 @@ const GalleryCarousel = () => {
                     controls
                     muted
                     playsInline
-                    className="w-full rounded-xl object-cover max-h-[240px] sm:max-h-[480px]"
+                    className="w-full rounded-xl object-contain h-[300px] sm:h-[500px]"
+                    style={{ backgroundColor: "#000000" }}
                   />
                 ) : (
                   <img
                     src={slide.url}
                     alt=""
-                    className="w-full h-[240px] sm:h-[480px] object-cover rounded-xl"
+                    className="w-full h-[300px] sm:h-[500px] object-contain rounded-xl"
+                    style={{ backgroundColor: "#08123a" }}
                   />
                 )}
               </div>
             ))}
+          </div>
 
-            <div className="absolute top-4 right-4 font-satoshi text-xs text-white/50 bg-black/40 px-2.5 py-1 rounded-[20px]">
-              {current + 1} / {slides.length}
-            </div>
+          <div className="flex items-center justify-center gap-1 mt-2 font-satoshi text-xs text-white/50">
+            {current + 1} / {slides.length}
           </div>
 
           <button
             onClick={prev}
-            className="absolute left-2 sm:-left-5 top-[120px] sm:top-[240px] -translate-y-1/2 w-11 h-11 rounded-full flex items-center justify-center bg-black/50 sm:bg-white/[0.08] hover:bg-primary/85 transition-colors duration-200 cursor-pointer"
+            className="absolute hidden sm:flex -left-14 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full items-center justify-center bg-white/[0.08] hover:bg-primary/85 transition-colors duration-200 cursor-pointer"
             aria-label="Slide anterior"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
           </button>
           <button
             onClick={next}
-            className="absolute right-2 sm:-right-5 top-[120px] sm:top-[240px] -translate-y-1/2 w-11 h-11 rounded-full flex items-center justify-center bg-black/50 sm:bg-white/[0.08] hover:bg-primary/85 transition-colors duration-200 cursor-pointer"
+            className="absolute hidden sm:flex -right-14 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full items-center justify-center bg-white/[0.08] hover:bg-primary/85 transition-colors duration-200 cursor-pointer"
             aria-label="Próximo slide"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 6 15 12 9 18" /></svg>
