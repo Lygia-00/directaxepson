@@ -79,7 +79,7 @@ serve(async (req) => {
       body: JSON.stringify({
         from: "Directa Leads <onboarding@resend.dev>",
         to: ["contato@directa.com.br"],
-        subject: `Novo lead — HOSPEX 2026: ${nome}`,
+        subject: `Novo lead — HOSPEX 2026: ${safeNome}`,
         html,
       }),
     });
