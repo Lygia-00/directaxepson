@@ -23,15 +23,15 @@ const FomoBanner = () => {
         {/* Left */}
         <div className="space-y-4">
           <h2 className="font-clash font-bold text-white leading-tight text-[clamp(1.6rem,3vw,2.4rem)]">
-            Vagas para demonstração ao vivo na HOSPEX estão acabando
+            Os hospitais que lideram a acreditação já estão adotando. Os que esperam, pagam o preço depois.
+
           </h2>
           <p className="font-satoshi text-white/80 leading-relaxed">
             Garanta agora a demonstração presencial com a equipe Directa. Agenda limitada — apenas para gestores e diretores hospitalares.
           </p>
-          <a
-            href="#contato"
-            className="inline-flex w-full sm:w-auto justify-center bg-white text-primary font-satoshi font-bold text-sm px-6 py-3 rounded-lg hover:bg-white/90 active:scale-[0.97] transition-all"
-          >
+          <a href="#contato"
+          className="inline-flex w-full sm:w-auto justify-center bg-white text-primary font-satoshi font-bold text-sm px-6 py-3 rounded-lg hover:bg-white/90 active:scale-[0.97] transition-all">
+            
             Garantir minha vaga →
           </a>
         </div>
@@ -40,13 +40,13 @@ const FomoBanner = () => {
         <div className="flex justify-center">
           <div className="flex flex-col items-center text-center shrink-0 min-w-[120px]">
             <div className="font-clash font-black text-white text-[3rem] leading-none tabular-nums">{count}</div>
-            <span className="font-satoshi text-white/70 text-xs mt-1.5 block">vagas restantes</span>
+            <span className="font-satoshi text-white/70 text-xs mt-1.5 block">brasileiros morrem por hora
+</span>
             <span className="font-satoshi text-white/70 text-xs block">para demonstração gratuita</span>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
 };
 
 export default FomoBanner;
