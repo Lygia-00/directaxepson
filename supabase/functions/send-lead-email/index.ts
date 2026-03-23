@@ -88,7 +88,7 @@ serve(async (req) => {
 
     if (!res.ok) {
       console.error("Resend error:", data);
-      return new Response(JSON.stringify({ error: data }), {
+      return new Response(JSON.stringify({ error: "Failed to send email" }), {
         status: 400,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
