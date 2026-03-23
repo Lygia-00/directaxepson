@@ -1,36 +1,44 @@
 
-# Landing Page Directa × HOSPEX 2026
+# Correções na Landing Page — 5 itens
 
-## Visão Geral
-Landing page completa para a Directa (parceira Epson), focada no mercado hospitalar para o evento HOSPEX 2026. Design com identidade visual oficial da Directa (vermelho #e70036, azul marinho #08123a) e tipografia Satoshi + Clash Display.
+## 1. Remover FontDebug (App.tsx)
+Remove the entire `FontDebug` component (lines 12-29) and its `<FontDebug />` usage (line 37). Also remove unused `useState`/`useEffect` imports.
 
-## Estrutura de Componentes (12 seções)
+## 2. Tipografia e espaçamento global (index.css)
+Update the `@layer base` block to add refined typography rules:
+- `body`: font-size 16px, line-height 1.6, letter-spacing -0.01em
+- `h1, h2, h3`: line-height 1.1, letter-spacing -0.03em
+- Add `p` rule: font-weight 400, line-height 1.75, letter-spacing -0.01em
 
-1. **Navbar** — Fixa no topo com logo "DIRECTA.", badge HOSPEX 2026, CTA de demonstração, blur e shadow ao scroll
-2. **Hero** — Grid 2 colunas com headline de impacto, estatísticas alarmantes (mortes evitáveis, custos), 4 stat cards com dados da OMS, CTAs primário e ghost
-3. **CostSection** (#dados) — Fundo cinza claro, blockquote com citação, 4 cards de custos invisíveis (indenizações, reputação, reinternações, turnover)
-4. **BrazilSection** — Fundo azul marinho, 6 cards com dados do cenário brasileiro (55 mil mortes/ano, 75% sem padrão, etc.)
-5. **SolutionSection** (#solucao) — Fundo branco, 6 cards de funcionalidades da solução ColorWorks (foto real, QR Code, cores de risco, etc.) com hover animado
-6. **CompareSection** — Tabela comparativa "Método Tradicional vs Com ColorWorks" com 7 linhas de features
-7. **AppsSection** — Grid 2 colunas com 10 aplicações numeradas da solução
-8. **FomoBanner** — Banner vermelho com contador animado (0→6 vagas) e CTA urgente
-9. **TrustSection** — 3 cards de confiança (Parceiro Epson, Integração, Implementação guiada)
-10. **CTASection** (#contato) — Formulário com 3 campos (nome, hospital, WhatsApp) + botão + garantias
-11. **SourcesBox** — 10 fontes e referências científicas listadas
-12. **Footer** — Copyright + "DIRECTA. × EPSON"
+## 3. Espaçamento — BrazilSection e Hero stat cards
 
-## Design System
-- Cores: vermelho #e70036, azul marinho #08123a, azul #00318e, cinza #d2d2d2
-- Fontes: Satoshi (corpo) + Clash Display (headlines/números)
-- Logo: "DIRECTA." em Satoshi 800 com ponto vermelho
+**BrazilSection cards:**
+- Change padding from `p-6` to `py-7 px-6` (28px 24px)
+- Number: add `mb-1.5` (6px), keep existing styles
+- Title (h3): change `mt-2` to `mb-2` (8px gap to paragraph)
+- Paragraph: add `leading-[1.65]`
 
-## Animações
-- Scroll reveal com IntersectionObserver em todos os cards
-- Hero com fadeUp sequencial
-- Contador animado no FomoBanner
-- Hover com translateY e shadow nos solution cards
+**Hero stat cards:**
+- Number: add `mb-1.5`, `leading-none`, keep `text-[1.6rem]`
+- Label: add `leading-[1.55]`, `mb-1`
+- Source: change `mt-2` to `mt-1`
+- Gap already 4 (gap-4 = 16px) — correct
 
-## Responsividade
-- Desktop: layouts multi-coluna conforme especificado
-- Tablet (<900px): reduções para 2 e 1 coluna
-- Mobile (<640px): tudo em 1 coluna, stacks verticais
+## 4. CompareSection — complete rewrite
+New table with:
+- 7 new rows of content as specified
+- max-width 860px, border-radius 12px, overflow hidden, box-shadow
+- Alternating row backgrounds (white / #f9f9f9, #fff5f5 / #fff0f0, #f0fdf4 / #e8faf0)
+- Header: empty first col, red-tinted "Método Tradicional", navy "Com ColorWorks"
+- Satoshi 500/600 13px throughout
+
+## 5. SourcesBox — replace all 10 sources
+Replace the entire sources array with the 10 new references provided.
+
+## Files changed
+- `src/App.tsx` — remove FontDebug
+- `src/index.css` — typography rules
+- `src/components/Hero.tsx` — stat card spacing
+- `src/components/BrazilSection.tsx` — card spacing
+- `src/components/CompareSection.tsx` — full rewrite
+- `src/components/SourcesBox.tsx` — new sources
