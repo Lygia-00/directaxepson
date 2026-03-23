@@ -4,16 +4,16 @@ const AppsSection = () => {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
 
   const apps = [
-  { title: "Pulseiras de identificação", desc: "Com foto, cores de risco, QR Code e dados completos do paciente." },
-  { title: "Etiquetas de medicamento", desc: "Identificação segura de frascos, seringas e soluções com código de barras." },
-  { title: "Etiquetas de hemoterapia", desc: "Rastreabilidade total de bolsas de sangue e hemoderivados." },
-  { title: "Etiquetas laboratoriais", desc: "Tubos de ensaio e amostras com identificação resistente a álcool e água." },
-  { title: "Etiquetas de dieta", desc: "Identificação de bandejas com dados nutricionais e restrições alimentares." },
-  { title: "Etiquetas de patrimônio", desc: "Controle de equipamentos hospitalares com código de barras durável." },
-  { title: "Sinalização de leito", desc: "Placas coloridas com dados do paciente para cabeceira de leito." },
-  { title: "Identificação de recém-nascidos", desc: "Pulseiras mãe-bebê com foto e dados de vínculo seguro." },
-  { title: "Etiquetas de esterilização", desc: "Rastreabilidade de instrumentos e kits cirúrgicos." },
-  { title: "Crachás e identificação funcional", desc: "Impressão sob demanda para visitantes, acompanhantes e equipe." }];
+  { title: "Pulseira de identificação de pacientes", desc: "Foto + QR Code + nome + tipo sanguíneo + prontuário. Um escaneio acessa tudo." },
+  { title: "Identificação de alergias por cor", desc: "Cores de alerta configuráveis — equipe identifica riscos à distância, sem precisar ler." },
+  { title: "Protocolo Manchester de triagem", desc: "Níveis de urgência visíveis na pulseira — vermelho, laranja, amarelo, verde, azul." },
+  { title: "Etiquetas de medicamentos e soros", desc: "Nome do paciente, foto e dados na bolsa de soro ou frasco — erros de medicação reduzidos drasticamente." },
+  { title: "Identificação de bolsas de sangue", desc: "Rastreabilidade total de bolsas de sangue e hemoderivados." },
+  { title: "Dietas restritivas personalizadas", desc: "Embalagem da refeição com nome do paciente e restrições alimentares impressos na hora." },
+  { title: "Crachás de equipe e visitantes", desc: "Foto, nome, setor e permissões em crachás impressos sob demanda com total personalização." },
+  { title: "Pulseiras de acompanhantes", desc: "Acompanhantes identificados com dados do paciente que acompanham — aumenta segurança em pediatria e maternidade." },
+  { title: "Etiquetas para centro cirúrgico", desc: "Confirmação de identidade antes de procedimento — reduz o risco de cirurgias em local errado." },
+  { title: "Carteira de vacinação personalizada", desc: "Com foto da criança e marca do hospital — o vínculo institucional dura a vida toda do paciente." }];
 
 
   return (

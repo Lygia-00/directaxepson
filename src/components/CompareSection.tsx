@@ -4,7 +4,7 @@ const CompareSection = () => {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
 
   const rows = [
-  ["Identificação visual", "Texto preto e branco, sem foto", "Foto colorida do paciente"],
+  ["Identificação visual do paciente", "Texto preto e branco, sem foto", "Foto colorida do paciente"],
   ["Cores de risco", "Adesivos manuais, sujeitos a erro", "Impressão automática por protocolo"],
   ["Código de barras/QR", "Sem padronização, erros de leitura", "QR Code integrado ao PEP"],
   ["Impressão", "Centralizada, lenta, com estoque", "Sob demanda, no ponto de atendimento"],

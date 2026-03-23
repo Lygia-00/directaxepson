@@ -4,9 +4,9 @@ const TrustSection = () => {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
 
   const items = [
-  { icon: "🏆", title: "Parceiro oficial Epson", desc: "Distribuidor autorizado com suporte técnico especializado e garantia de fábrica." },
-  { icon: "🔗", title: "Integração com seus sistemas", desc: "API aberta compatível com os principais HIS, PEP e sistemas de gestão hospitalar." },
-  { icon: "⚙️", title: "Implementação guiada", desc: "Acompanhamento completo desde a instalação até o treinamento da equipe assistencial." }];
+  { icon: "🏆", title: "Parceiro oficial Epson", desc: "A Directa é distribuidora autorizada Epson para soluções de impressão na saúde — suporte técnico, treinamento e garantia direta." },
+  { icon: "🔗", title: "Integração com seus sistemas", desc: "Tasy, MV, Pixeon e outros ERPs hospitalares. A implementação não exige mudança de sistema — funciona com o que você já usa." },
+  { icon: "⚙️", title: "Implementação guiada", desc: "Da instalação ao treinamento da equipe. Acompanhamos cada etapa para que o ganho de segurança seja imediato e consistente." }];
 
 
   return (

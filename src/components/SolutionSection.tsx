@@ -4,12 +4,12 @@ const SolutionSection = () => {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
 
   const solutions = [
-  { icon: "🖼️", title: "Foto real do paciente", desc: "Pulseiras com foto impressa em alta resolução para identificação visual imediata." },
-  { icon: "🎨", title: "Cores de risco e Protocolo Manchester", desc: "Impressão colorida com codificação por cores de alergia, risco de queda e prioridade." },
-  { icon: "📱", title: "QR Code + integração total", desc: "Leitura instantânea com qualquer smartphone, integrada ao PEP e sistemas hospitalares." },
-  { icon: "🔒", title: "Pulseira única por paciente", desc: "Cada pulseira é impressa sob demanda, eliminando estoque e troca acidental." },
-  { icon: "⚡", title: "Sob demanda, em segundos", desc: "Impressão no ponto de atendimento, sem filas nem dependência de TI." },
-  { icon: "🌐", title: "Todas as aplicações em uma", desc: "Uma única impressora para pulseiras, etiquetas, tubos de ensaio e medicamentos." }];
+  { icon: "🖼️", title: "Foto real do paciente", desc: "A identidade visual elimina a margem de erro que o nome escrito jamais consegue garantir. Inédito no mercado mundial de saúde." },
+  { icon: "🎨", title: "Cores de risco e Protocolo Manchester", desc: "Alergias, risco de queda, tipo sanguíneo e prioridade de atendimento visíveis à distância — configuráveis por setor." },
+  { icon: "📱", title: "QR Code + integração total", desc: "Integrado nativamente com Tasy, MV e Pixeon. Um scan acessa o prontuário completo — zero digitação, zero erro humano." },
+  { icon: "🔒", title: "Pulseira única por paciente", desc: "Substitui a necessidade de múltiplas pulseiras por condição. Um único item no pulso do paciente carrega todas as informações críticas." },
+  { icon: "⚡", title: "Sob demanda, em segundos", desc: "Elimina estoques de pulseiras pré-coloridas, reduz desperdício e permite impressão exatamente quando o paciente chega à recepção." },
+  { icon: "🌐", title: "Todas as aplicações em uma", desc: "Pulseiras, etiquetas de medicamentos, bolsas de sangue, dietas, crachás e carteiras de vacinação — um único equipamento resolve tudo." }];
 
 
   return (

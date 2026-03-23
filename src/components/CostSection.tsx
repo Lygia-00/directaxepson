@@ -4,10 +4,10 @@ const CostSection = () => {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
 
   const costs = [
-  { emoji: "💸", title: "Indenizações e processos judiciais", desc: "Processos por erro médico podem ultrapassar milhões em indenizações, além de custos judiciais prolongados." },
-  { emoji: "📉", title: "Perda de acreditação e reputação", desc: "Falhas de identificação comprometem selos de qualidade e a confiança da comunidade médica." },
-  { emoji: "🔁", title: "Reinternações e retrabalho", desc: "Erros geram tratamentos desnecessários, prolongam internações e sobrecarregam equipes." },
-  { emoji: "👥", title: "Turnover e clima organizacional", desc: "Profissionais expostos a erros recorrentes sofrem burnout e pedem demissão." }];
+  { emoji: "💸", title: "Indenizações e processos judiciais", desc: "A média de indenização por caso de negligência médica nos EUA é de US$348 mil. No Brasil, o volume de ações está crescendo 130% em 10 anos (CNJ, 2017)." },
+  { emoji: "📉", title: "Perda de acreditação e reputação", desc: "Hospitais com erros documentados de identificação perdem pontos em processos de acreditação (JCI, ONA), afetando contratos com operadoras e planos de saúde." },
+  { emoji: "🔁", title: "Reinternações e retrabalho", desc: "Erros de identificação geram procedimentos repetidos, exames refeitos e reinternações — todos não reembolsáveis, consumindo recursos invisíveis do hospital." },
+  { emoji: "👥", title: "Turnover e clima organizacional", desc: "Profissionais envolvidos em erros graves desenvolvem burnout, culpa e depressão — aumentando a rotatividade e o custo de reposição de equipe." }];
 
 
   return (

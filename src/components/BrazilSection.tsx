@@ -4,12 +4,12 @@ const BrazilSection = () => {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
 
   const cards = [
-  { number: "55 mil", title: "mortes por ano", desc: "Brasileiros morrem anualmente por erros médicos evitáveis.", featured: true },
-  { number: "1,3M", title: "pacientes com efeitos adversos", desc: "Hospitalizações com danos causados por falhas no cuidado." },
-  { number: "75%", title: "dos hospitais sem padrão", desc: "Não possuem protocolo formal de identificação do paciente." },
-  { number: "+130%", title: "crescimento em ações judiciais", desc: "Aumento de processos por erro médico na última década." },
-  { number: "2%", title: "chegam a processar", desc: "A maioria das vítimas sequer entra com ação — o problema é ainda maior." },
-  { number: "1 em 10", title: "pacientes sofrem dano", desc: "No ambiente hospitalar, segundo dados da OMS." }];
+  { number: "55 mil", title: "mortes por ano", desc: "Brasileiros que morrem anualmente por erros médicos evitáveis — equivalente a 6 mortes por hora. UFMG / IESS, 2018.", featured: true },
+  { number: "1,3M", title: "pacientes com efeitos adversos", desc: "Estimativa anual de pacientes que sofrem algum dano durante internação hospitalar no Brasil. UFMG, 2018." },
+  { number: "75%", title: "dos hospitais sem padrão", desc: "Pesquisa brasileira revelou que 75% dos hospitais não padronizam o uso de pulseiras — e 33% colocam múltiplas pulseiras no mesmo paciente. BJHR, 2021." },
+  { number: "+130%", title: "crescimento em ações judiciais", desc: "Aumento de ações judiciais na saúde entre 2008 e 2017. A tendência de judicialização está acelerando. CNJ, 2017." },
+  { number: "2%", title: "chegam a processar", desc: "Estima-se que apenas 2% das vítimas de erros médicos abrem processos no Brasil — o que sugere que o problema real é muito maior. JAMA, 2020." },
+  { number: "1  em  10", title: "pacientes sofrem dano", desc: "Em países de alta renda, 1 em cada 10 hospitalizados sofre algum dano durante o cuidado — metade evitável. OMS, 2019." }];
 
 
   return (
