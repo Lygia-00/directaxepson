@@ -22,7 +22,7 @@ const AppsSection = () => {
         <div className="text-center mb-14 space-y-4">
           <span className="font-satoshi font-semibold text-[11px] uppercase tracking-[2px] text-primary">Aplicações hospitalares
 </span>
-          <h2 className="font-clash font-bold text-accent text-3xl lg:text-4xl">10 aplicações em uma única impressora</h2>
+          <h2 className="font-clash font-bold text-accent text-3xl lg:text-4xl">10 problemas que uma impressora resolve no seu hospital</h2>
         </div>
 
         <div ref={ref}

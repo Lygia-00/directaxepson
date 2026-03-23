@@ -23,11 +23,11 @@ const CostSection = () => {
           <span className="font-satoshi font-semibold text-[11px] uppercase tracking-[2px] text-primary">O custo escondido
 </span>
           <h2 className="font-clash font-bold text-accent text-3xl lg:text-4xl leading-tight">
-            O custo que ninguém contabiliza
+            Cada erro de identificação carrega um preço que não aparece no orçamento
           </h2>
           <div className="w-12 h-[3px] bg-primary rounded-full" />
           <p className="font-satoshi text-gray-600 leading-relaxed">
-            A cada ano, milhões de pacientes são vítimas de erros evitáveis ligados à identificação incorreta. Esses erros custam vidas, dinheiro e reputação — e a maioria dos hospitais nem sabe que está pagando por eles.
+            Gestores hospitalares monitoram custos de insumos, energia, pessoal. Mas existe uma categoria de despesa que a maioria nunca mensura com precisão: o custo jurídico, reputacional e operacional gerado por falhas de identificação de pacientes.
           </p>
           <blockquote className="border-l-4 border-primary bg-white rounded-r-lg p-5 font-satoshi italic text-accent text-sm leading-relaxed">
             "A identificação incorreta do paciente é a causa-raiz da maioria dos eventos adversos evitáveis no ambiente hospitalar."

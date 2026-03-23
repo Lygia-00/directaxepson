@@ -15,7 +15,7 @@ const TrustSection = () => {
         <div className="text-center mb-14 space-y-4">
           <span className="font-satoshi font-semibold text-[11px] uppercase tracking-[2px] text-primary">Por que a Directa
 </span>
-          <h2 className="font-clash font-bold text-accent text-3xl lg:text-4xl">Por que escolher a Directa</h2>
+          <h2 className="font-clash font-bold text-accent text-3xl lg:text-4xl">Tecnologia Epson. Parceria que conhece o mercado de saúde.</h2>
         </div>
 
         <div ref={ref}

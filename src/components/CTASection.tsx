@@ -19,7 +19,7 @@ const CTASection = () => {
 
         </h2>
         <p className="font-satoshi text-white/60 leading-relaxed">
-          Preencha o formulário e nossa equipe entrará em contato em até 2 horas úteis.
+          Agende uma demonstração gratuita com nosso time. Em 30 minutos, você verá exatamente como a solução funciona na sua realidade.
         </p>
 
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center mt-8">

@@ -22,7 +22,7 @@ const SolutionSection = () => {
 
           </h2>
           <p className="font-satoshi text-muted-foreground leading-relaxed">
-            Pulseiras inteligentes, impressas em cores, sob demanda e integradas ao sistema hospitalar.
+            A Epson ColorWorks C4000u é a primeira impressora do mundo que imprime pulseiras hospitalares coloridas, com foto do paciente, QR Code e dados clínicos — em uma única impressão, sob demanda, integrada ao seu sistema de gestão hospitalar.
           </p>
         </div>
 

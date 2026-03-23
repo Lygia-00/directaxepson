@@ -22,7 +22,7 @@ const BrazilSection = () => {
 
           </h2>
           <p className="font-satoshi text-white/60 leading-relaxed">
-            Os números são alarmantes — e a solução é mais simples do que parece.
+            Os dados brasileiros sobre erros de identificação são escassos justamente porque, culturalmente, ainda se tende a esconder o erro ao invés de medi-lo. Mas o que existe é contundente.
           </p>
         </div>
 
