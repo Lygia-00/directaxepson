@@ -45,7 +45,6 @@ const CTASection = () => {
           nome: form.nome.trim(),
           hospital: form.hospital.trim(),
           whatsapp: form.whatsapp.trim(),
-          created_at: new Date().toISOString(),
         },
       });
 
