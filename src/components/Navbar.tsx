@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import logo from "@/assets/Logo-Epson-e-Directa.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
