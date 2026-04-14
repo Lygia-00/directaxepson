@@ -21,10 +21,6 @@ const Navbar = () => {
         {/* Logo */}
         <img src={logo} alt="Directa × Epson" className="h-6 sm:h-7 w-auto" />
 
-        {/* Badge — hidden on mobile */}
-        <span className="hidden sm:inline-flex bg-primary text-primary-foreground font-satoshi font-bold text-[11px] uppercase tracking-[0.12em] px-4 py-1.5 rounded-[20px]">
-          HOSPEX 2026
-        </span>
 
         {/* CTA */}
         <a
